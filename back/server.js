@@ -4,7 +4,7 @@ const cors = require('cors');
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Hello, World!\n');
+    res.send('Hello,\n');
 });
 
 const PORT = 3000;
