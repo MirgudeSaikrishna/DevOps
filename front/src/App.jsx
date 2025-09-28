@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 
 function App() {
   const [text, setText] = useState('')
+  const [name, setName] = useState('')
   const texxt=()=>{
     const res=fetch('http://localhost:3000/')
     .then(res=>res.text())
@@ -11,8 +12,9 @@ function App() {
   }
   return (
     <>
+    <input type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder='enter name'/>
     <button onClick={texxt}>Fetch Message</button>
-    <h1>{text}</h1>
+    <h1>{text}{name}</h1>
     </>
   )
 }
